@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class User {
+            constructor(firstName, lastName, userHobbies) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.userHobbies = userHobbies;
+            }
+
+            getFullName = () => {
+                return `${this.firstName} ${this.lastName}`;
+            }
+        }
+
+
+        class AdminUser extends User {
+            setPassword = (password) => {
+                this.password = password;
+            }
+        }
+
+
+        let John = new User('Jonn','Davis',['soccer','volleyball']);
+        console.log(John);
+        console.log(John.getFullName());
+
+        let Sean = new User('Sean', 'Choi', ['Music','Bowling']);
+        console.log('Sean: ', Sean);
+
+        let Yoori = new AdminUser('Yoori', 'Kim', ['shopping','nothing'], 'loveme');
+        console.log(Yoori);
+
+        
+        
+        
+        
+        let user = {
+            firstName:'John',
+            lastName: 'Davise',
+            setPassword: (user, password) => {
+                user.password = password;
+            },
+            'user Hobbise': [
+                'soccer',
+                'volleyball'
+            ],
+            getFullName: (user) => {
+                return `${user.firstName} ${user.lastName}`
+            }
+        }
+   
+    // console.log(user)
+    // console.log(user.getFullName(user));
+    // console.log(user.firstName);
+    // console.log(user['lastName']);
+    // console.log(user['user Hobbies']);
+
+    // if('firstName' in user) {
+    //     console.log('First name exists');
+    // }
+
+    // if('randomAttr' in user) {
+    //     console.log('randomAttr exists');
+    // } else {
+    //     console.log('randomAttr does not exist');
+    // }
+
+    // for (let prop in user) {
+    //     console.log(prop);
+    //     console.log(user[prop]); 
+    // }
+    </script>
+    
+    
+
+</body>
+</html>
